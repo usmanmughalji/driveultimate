@@ -31,6 +31,15 @@ async def new_join_f(client, message):
     # delete all other messages, except for AUTH_CHANNEL
     await message.delete(revoke=True)
 
+    
+async def welcome_message_f(client, message):
+    # await message.reply_text("no one gonna help you 🤣🤣🤣🤣", quote=True)
+    #channel_id = str(AUTH_CHANNEL)[4:]
+    #message_id = 99
+    # display the /help
+    
+    await message.reply_text("""Welcome to Team Drive X""", disable_web_page_preview=True)    
+    
 
 async def help_message_f(client, message):
     # await message.reply_text("no one gonna help you 🤣🤣🤣🤣", quote=True)
@@ -38,8 +47,8 @@ async def help_message_f(client, message):
     #message_id = 99
     # display the /help
     
-    await message.reply_text("""join this group forr help-- @torrentleechgdrivesupport\n\n And also don't forget to fork this repo: <a href="https://github.com/gautamajay52/TorrentLeech-Gdrive">TorrentLeech-Gdrive</a>""", disable_web_page_preview=True)
-
+    await message.reply_text("`/leech`: Magnet or direct link and it will upload to telegram\n \n`/gleech`: Magnet or direct link and it will upload to cloud\n \n`/tleech`: This will mirror the telegram files to cloud\n \n`/status`: Check current status of bot\n \n`/leech archive`: Upload torrent and files to telegram in tar.gz\n \n`/gleech archive`: compress file/folder and upload to cloud\n \n`/leech unzip`: This will unzip the .zip file and dupload to telegram\n \n`/gleech unzip`: This will unzip the .zip file and upload to cloud\n \n`/leech unrar`: This will unrar the .rar file and dupload to telegram\n \n`/gleech unrar`: This will unrar the .rar file and upload to cloud\n \n`/leech untar`: This will untar the .tar file and upload to telegram\n \n`/gleech untar`: This will untar the .tar file and upload to cloud\n \n`/tleech unzip`: This will unzip the .zip telegram file and upload to cloud\n \n`/tleech unrar`: This will unrar the .rar telegram file and upload to cloud\n \n`/tleech untar`: This will untar the .tar telegram file and upload to cloud\n \n`/getsize`: This will give you total size of your destination folder in cloud\n \n`/ytdl`: This command should be used as reply to a supported links\n \n`/ytdl gdrive`: This will download and upload to your cloud\n \n`/pytdl`: download videos from youtube playlist link and will upload to telegram\n \n`/pytdl gdrive`: download youtube playlist and upload to your cloud\n \n`/renewme`: clear files from server")
+    
 
 async def rename_message_f(client, message):
     inline_keyboard = []
